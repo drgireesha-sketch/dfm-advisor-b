@@ -1,5 +1,6 @@
 /* eslint-disable */
 import { useState, useEffect, useRef, useCallback } from "react";
+import { Analytics } from "@vercel/analytics/react";
 
 // ─── DFM Knowledge Base ───────────────────────────────────────────────────────
 const PROCESSES = {
@@ -1402,6 +1403,7 @@ export default function App() {
             <div style={{ fontSize: "11px", color: "#3d4a5c" }}>Evaluating {Object.keys(PROCESSES).length} process rule sets{uploadedFile ? ` · integrating ${uploadedFile.type} data` : ""}...</div>
           </div>
         )}
+        <Analytics />
       </div>
     </div>
   );
